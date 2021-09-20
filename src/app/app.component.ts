@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Producto,ProductoporAlmacen,Almacen } from './clases';
 
 
 @Component({
@@ -10,64 +11,13 @@ export class AppComponent {
   title = 'proyectoAngular1';
 }
 
-class Producto{
- 
-  constructor(
-    private codProducto:String,
-    private nomProducto:String,
-    private precioProducto:number,
-    
-  ){}
 
-  
-}
-
-class ProductoporAlmacen{
-  constructor( 
-    private producto:Producto,
-    private cantidad:number,
-    private almacen:Almacen){}
-  public GetProducto(){
-    return this.producto
-  }
-  public Getcantidad(){
-
-    return this.cantidad;
-  }
-  public Agregarcantidad(cantidada:number){
-    this.cantidad+=cantidada;
-  }
-  public Quitarcantidad(cantidada:number){
-    this.cantidad-=cantidada;
-  }
-}
-
-  
-
-class Almacen{
-  constructor(
-    private codAlmacen:String,
-    private direccionAlmacen:String,
-    private productos:ProductoporAlmacen[]=[]
-    ){}
-    public agregarproducto(producto:ProductoporAlmacen){
-      this.productos.push(producto);
-      
-    }
-    public buscarProducto(producto:Producto){
-      const resultado=this.productos.find(product=>product.GetProducto()==producto);
-      if (resultado==null){
-        return BasioAl;
-      }
-      return resultado;
-    }
-}
 
 const almacen01:Almacen=new Almacen('Alm001','Magisterio segunda etapa H-22');
 const almacen02:Almacen=new Almacen('Alm002','La florida Y-9');
 const almacen03:Almacen=new Almacen('Alm002','Pardo I-99');
 
-const Basio:Producto=new Producto('P0000',"No hay producto",0)
+
 const LecheGloria:Producto=new Producto('P0001','Leche gloria',3.5);
 const LechePuraVida:Producto=new Producto('P0002','Leche Pura Vida',3);
 const GalletasodaV:Producto=new Producto('P0003','Galleta Soda V',0.8);
@@ -83,7 +33,7 @@ const SalCocina:Producto=new Producto('P0012','Sal de cocina',3.5);
 const SalMesa:Producto=new Producto('P0014','Sal de mesa',3.5);
 const Ajinomoto:Producto=new Producto('P0015','Ajinomoto',1);
 
-const BasioAl:ProductoporAlmacen=new ProductoporAlmacen(Basio,0,almacen01)
+
 const Almacen01LecheGloria: ProductoporAlmacen=new ProductoporAlmacen(LecheGloria,5,almacen01);
 almacen01.agregarproducto(Almacen01LecheGloria);
 const Almacen01LechePuraVida: ProductoporAlmacen=new ProductoporAlmacen( LechePuraVida,20,almacen01);
@@ -173,5 +123,7 @@ function transferir(proveedor:Almacen,destino:Almacen,producto:Producto,cantidad
       console.log("El saldo es insuficiente para relaizar la transferencia")
     }
 }
-
-transferir(almacen01,almacen02,LecheGloria,10);
+console.log(Almacen01Ajinomen.Getcantidad())
+Almacen01Ajinomen.Agregarcantidad(5);
+console.log(Almacen01Ajinomen.Getcantidad())
+transferir(almacen01,almacen02,LecheGloria,5);
