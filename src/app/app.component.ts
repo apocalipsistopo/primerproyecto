@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Producto,ProductoporAlmacen,Almacen } from './clases';
+import { Component, ViewContainerRef } from '@angular/core';
+import { Producto, ProductoporAlmacen, Almacen } from './clases';
 
 
 @Component({
@@ -137,7 +137,18 @@ function transferir(proveedor:Almacen,destino:Almacen,producto:Producto,cantidad
       console.log("El saldo es insuficiente para relaizar la transferencia")
     }
 }
+function venta(producto:Producto,almacen:Almacen,cantidad:number){
+  let PporAalmacen:ProductoporAlmacen=almacen.buscarProducto(producto)
+  if(PporAalmacen.Getcantidad()>=cantidad){
+    console.table(PporAalmacen);
+    PporAalmacen.Quitarcantidad(cantidad);
+    console.log("Se completo la venta")
+    console.table(PporAalmacen);
+    console.log("El monto a pagar es: ", cantidad*producto.Getprecio()," soles")
+  }
+}
 console.log(Almacen01Ajinomen.Getcantidad())
 Almacen01Ajinomen.Agregarcantidad(5);
 console.log(Almacen01Ajinomen.Getcantidad())
-transferir(almacen01,almacen02,LecheGloria,5);
+//transferir(almacen01,almacen02,LecheGloria,5);
+venta(Ajinomen,almacen01,5);

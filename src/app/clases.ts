@@ -1,11 +1,15 @@
 export class Producto{
- 
     constructor(
-      private codProducto:String,
-      private nomProducto:String,
-      private precioProducto:number,
-      
-    ){}
+        private codProducto:String,
+        private nomProducto:String,
+        private precioProducto:number,
+        
+      ){}
+    public Getprecio(){
+        return this.precioProducto;
+    }
+ 
+ 
   
     
   }
