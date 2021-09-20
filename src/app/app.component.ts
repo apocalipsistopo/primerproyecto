@@ -93,19 +93,33 @@ const Almacen02Ajinomoto: ProductoporAlmacen=new ProductoporAlmacen(Ajinomoto,18
 almacen02.agregarproducto(Almacen02Ajinomoto);
 
 const Almacen03LecheGloria: ProductoporAlmacen=new ProductoporAlmacen(LecheGloria,19,almacen03);
+almacen03.agregarproducto(Almacen03LecheGloria);
 const Almacen03LechePuraVida: ProductoporAlmacen=new ProductoporAlmacen( LechePuraVida,40,almacen03);
+almacen03.agregarproducto(Almacen03LechePuraVida);
 const Almacen03GalletasodaV: ProductoporAlmacen=new ProductoporAlmacen( GalletasodaV,31,almacen03 );
+almacen03.agregarproducto(Almacen03GalletasodaV);
 const Almacen03Galletasodafield: ProductoporAlmacen=new ProductoporAlmacen(Galletasodafield,14,almacen03);
+almacen03.agregarproducto(Almacen03Galletasodafield);
 const Almacen03Piqueos: ProductoporAlmacen=new ProductoporAlmacen(Piqueos,55,almacen03);
+almacen03.agregarproducto(Almacen03Piqueos);
 const Almacen03Doritos: ProductoporAlmacen=new ProductoporAlmacen(Doritos,11,almacen03);
+almacen03.agregarproducto(Almacen03Doritos);
 const Almacen03PapitasLays: ProductoporAlmacen=new ProductoporAlmacen(PapitasLays,10,almacen03);
+almacen03.agregarproducto(Almacen03PapitasLays);
 const Almacen03Ariel: ProductoporAlmacen=new ProductoporAlmacen(LecheGloria,8,almacen03);
+almacen03.agregarproducto(Almacen03Ariel);
 const Almacen03Patito: ProductoporAlmacen=new ProductoporAlmacen(Patito,2,almacen03);
+almacen03.agregarproducto(Almacen03Patito);
 const Almacen03Ace: ProductoporAlmacen=new ProductoporAlmacen(Ace,4,almacen03);
+almacen03.agregarproducto(Almacen03Ace);
 const Almacen03Ajinomen: ProductoporAlmacen=new ProductoporAlmacen(Ajinomen,4,almacen03);
+almacen03.agregarproducto(Almacen03Ajinomen);
 const Almacen03SalCocina: ProductoporAlmacen=new ProductoporAlmacen(SalCocina,6,almacen03);
+almacen03.agregarproducto(Almacen03SalCocina);
 const Almacen03SalMesa: ProductoporAlmacen=new ProductoporAlmacen(SalMesa,5,almacen03);
+almacen03.agregarproducto(Almacen03SalMesa);
 const Almacen03Ajinomoto: ProductoporAlmacen=new ProductoporAlmacen(Ajinomoto,8,almacen03);
+almacen03.agregarproducto(Almacen03Ajinomoto);
 
 
 function transferir(proveedor:Almacen,destino:Almacen,producto:Producto,cantidad:number){
