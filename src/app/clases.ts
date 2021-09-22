@@ -49,7 +49,7 @@ export class Producto{
       public buscarProducto(producto:Producto){
         const resultado=this.productos.find(product=>product.GetProducto()==producto);
         if (resultado==null){
-          return BasioAl;
+          return VacioAl;
         }
         return resultado;
       }
@@ -59,5 +59,5 @@ export class Producto{
   }
 
     const almacen00:Almacen=new Almacen('Alm000','*****');
-  const Basio:Producto=new Producto('P0000',"No hay producto",0)
-  const BasioAl:ProductoporAlmacen=new ProductoporAlmacen(Basio,0,almacen00)
+  const Vacio:Producto=new Producto('P0000',"No hay producto",0)
+  const VacioAl:ProductoporAlmacen=new ProductoporAlmacen(Vacio,0,almacen00)
